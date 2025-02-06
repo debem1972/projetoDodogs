@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de serviços de veterinária">
+    <meta name="keywords"
+        content="Aplicação web, aplicativo web veterinaria, site clinica veterinaria, site com bootstrap5, site responsivo,dev web">
+    <meta name="author" content="Daniel Lopes Bemfica">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Dodog - Clínica Veterinária</title>
+    <link rel="icon" type="image/png" href="./image/veterinario.png">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-offset="0" tabindex="0">
+    <nav id="sidebar" class="sidebar">
+        <img src="./image/remakeLogoDodogs.png" alt="Dodog's Logo" class="img-fluid">
+        <nav class="nav flex-column">
+            <a class="nav-link" href="#home"><i class="fas fa-home"></i> <span>Home</span></a>
+
+            <!-- Menu Serviços com submenu -->
+            <a class="nav-link" href="#servicos" id="servicosLink">
+                <i class="fas fa-stethoscope"></i> <span>Serviços</span>
+            </a>
+            <div class="submenu" id="servicosSubmenu">
+                <a class="nav-link" href="#emergencia">
+                    <i class="fas fa-ambulance"></i> <span>Emergência</span>
+                </a>
+                <a class="nav-link" href="#vacinacao">
+                    <i class="fas fa-syringe"></i> <span>Vacinação</span>
+                </a>
+                <a class="nav-link" href="#exames">
+                    <i class="fas fa-microscope"></i> <span>Exames</span>
+                </a>
+            </div>
+
+            <a class="nav-link" href="#precos"><i class="fas fa-tags"></i> <span>Preços</span></a>
+            <a class="nav-link" href="#faq"><i class="fas fa-question-circle"></i> <span>FAQ</span></a>
+            <a class="nav-link" href="#contato"><i class="fas fa-envelope"></i> <span>Contato</span></a>
+            <a class="nav-link" href="#localizacao"><i class="fas fa-map-marker-alt"></i> <span>Localização</span></a>
+            <div class="form-check form-switch ms-auto mt-2">
+                <label id="icone-toggle" class="form-check-label ms-3" for="lightSwitch"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-brightness-high" viewBox="0 0 16 16">
+                        <path
+                            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
+                        </path>
+                    </svg></label>
+                <input class="form-check-input" type="checkbox" id="lightSwitch">
+            </div>
+        </nav>
+    </nav>
+
+    <section id="home" class="d-flex align-items-center justify-content-center">
+        <img src="./image/veteriMedic.jpg" alt="Dodog's Logo" id="capaImage" class="img-fluid">
+        <div class="text-center">
+
+            <h1 class="display-1">Bem vindo à Dodog's</h1>
+            <h2>Clínica veterinária e Petshop</h2>
+            <p class="lead mt-3">Cuidando do seu melhor amigo com amor e dedicação</p>
+        </div>
+    </section>
+
+    <section id="servicos" class="bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Nossos Serviços</h2>
+
+            <!-- Card Emergência -->
+            <div class="service-card" id="emergencia">
+                <div class="card-header">
+                    <h3 class="m-0"><i class="fas fa-ambulance me-2"></i>Emergência 24h</h3>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Atendimento emergencial disponível 24 horas por dia, 7 dias por semana.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Equipe médica especializada</li>
+                        <li><i class="fas fa-check text-success me-2"></i>UTI Veterinária</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Pronto atendimento</li>
+                    </ul>
+
+                    <a id="emergencyContact" target="_blank" href="#" class="mt-4 w-30 p-3 btn btn-success"
+                        type="button" title="Fale conosco pelo whatsapp!"><i class="fab fa-whatsapp"></i> Contate-nos
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Vacinação -->
+            <div class="service-card" id="vacinacao">
+                <div class="card-header">
+                    <h3 class="m-0"><i class="fas fa-syringe me-2"></i>Vacinação</h3>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Programa completo de vacinação para cães e gatos.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Vacinas importadas</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Carteirinha de vacinação digital</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Acompanhamento personalizado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card Exames -->
+            <div class="service-card" id="exames">
+                <div class="card-header">
+                    <h3 class="m-0"><i class="fas fa-microscope me-2"></i>Exames</h3>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Diagnóstico preciso com equipamentos de última geração.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i>Exames laboratoriais</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Raio-X digital</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Ultrassonografia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="precos">
+        <div class="container border">
+            <h2 class="text-center mt-3 mb-3">Nossos Preços</h2>
+            <p class="fs-5 mb-5 text-center text-muted">Temos os melhores formas e planos de pagamento, para que você
+                fique
+                tranquilo.</p>
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card price-card h-100">
+                        <div class="card-header text-white text-center py-3">
+                            <h3>Básico</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="my-4">R$ 129,90</h4>
+                            <ul class="list-unstyled">
+                                <li>Consulta de Rotina</li>
+                                <li>Vacinação Básica</li>
+                                <li>Vermifugação</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card price-card h-100">
+                        <div class="card-header text-white text-center py-3">
+                            <h3>Premium</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="my-4">R$ 199,90</h4>
+                            <ul class="list-unstyled">
+                                <li>Consulta Completa</li>
+                                <li>Vacinação Premium</li>
+                                <li>Exames Básicos</li>
+                                <li>Banho e Tosa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card price-card h-100">
+                        <div class="card-header text-white text-center py-3">
+                            <h3>VIP</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="my-4">R$ 299,90</h4>
+                            <ul class="list-unstyled">
+                                <li>Consulta VIP</li>
+                                <li>Vacinação Completa</li>
+                                <li>Exames Completos</li>
+                                <li>Banho e Tosa Premium</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Perguntas Frequentes</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1">
+                            Qual o horário de funcionamento?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Funcionamos 24 horas para emergências e das 8h às 20h para consultas normais.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2">
+                            Preciso agendar consulta?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sim, para consultas de rotina é necessário agendamento prévio.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3">
+                            Aceitam plano de saúde pet?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sim, trabalhamos com os principais planos de saúde pet do mercado.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2 class="text-center mb-5">Entre em Contato</h2>
+            <div class="social-links">
+                <a href="#" class="d-flex align-items-center" title="Fale conosco pelo whatsapp!">
+                    <i class="fab fa-whatsapp me-3"></i> WhatsApp: (99) 99999-9999
+                </a>
+                <a href="#" class="d-flex align-items-center"
+                    title="Ligue pra nós!(Serviço de contato está disponível apenas para mobile.)">
+                    <i class="fas fa-phone me-3"></i> Telefone: (99) 9999-9999
+                </a>
+                <a href="#" class="d-flex align-items-center" title="Fale conosco por email.">
+                    <i class="fas fa-envelope me-3"></i> Email: contato@dodog.com.br
+                </a>
+                <a href="#" class="d-flex align-items-center" title="Visite nossa página!">
+                    <i class="fab fa-facebook me-3"></i> Facebook
+                </a>
+                <a href="#" class="d-flex align-items-center" title="Confira nossas promoções no Insta!">
+                    <i class="fab fa-instagram me-3"></i> Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="localizacao">
+        <div class="container">
+            <h2 class="text-center mb-5">Nossa Localização</h2>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 text-center">
+                    <p class="lead" title="Endereço fictício!">
+                        Av. Beira Mar, 1051<br>
+                        Bairro: Centro<br>
+                        Jurerê, RS
+                    </p>
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.675309767262!2d-50.1234567!3d-29.9876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDU5JzE1LjYiUyA1MMKwMDcnMjQuNCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890!5m2!1spt-BR!2sbr"
+                            style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dodog - Clínica Veterinária. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/switch.js"></script>
+
+</body>
+
+</html>
